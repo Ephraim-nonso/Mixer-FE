@@ -1,0 +1,43 @@
+#head {
+  text-align: center;
+  margin: auto;
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  background-color: #13173a;
+  padding: 3rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid #fff;
+  font-family: "Manrope", sans-serif;
+}
+
+.flex:last-child {
+  border: none;
+}
+
+.content {
+  flex: 3;
+  color: #fff;
+}
+
+.content h5 {
+  font-size: 1.5rem;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  padding-right: 5rem;
+}
+
+.img {
+  flex: 2;
+}

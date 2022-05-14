@@ -1,0 +1,17 @@
+.container {
+  background-color: #f4f6fe;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #585bc8, #cf6dbb);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}

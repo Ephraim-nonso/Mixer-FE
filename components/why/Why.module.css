@@ -1,0 +1,29 @@
+#head {
+  text-align: center;
+  margin: auto;
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  background-color: #13173a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  color: white;
+  padding: 0.3rem 3rem;
+}
+
+.single {
+  margin: 2rem 0;
+}
+
+.content h5 {
+  font-size: 1.5rem;
+}
+
+.content p {
+  font-size: 1rem;
+}
