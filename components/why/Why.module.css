@@ -9,6 +9,7 @@
   background-color: #13173a;
   display: flex;
   justify-content: space-between;
+  font-family: "Manrope", sans-serif;
 }
 
 .content {

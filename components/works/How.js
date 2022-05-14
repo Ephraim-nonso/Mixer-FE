@@ -36,7 +36,7 @@ const contents = [
 const How = () => {
   return (
     <div className={styles.container}>
-      <h3 id={styles.head}>How It Works</h3>
+      <h3 id={styles.head}>How Mixer Works</h3>
 
       <section className={styles.wrapper}>
         {contents.map((item) => {
