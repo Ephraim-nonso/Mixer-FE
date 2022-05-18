@@ -1,0 +1,30 @@
+.container {
+  padding: 2rem 4rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.head {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #585bc8;
+  padding-bottom: 1rem;
+}
+
+.content {
+  padding: 0.9rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #585bc8;
+}
+
+.content p:first-child {
+  flex: 4;
+  text-align: left;
+}
+
+.content p {
+  flex: 1;
+  text-align: center;
+}

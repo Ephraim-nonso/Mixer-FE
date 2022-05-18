@@ -20,7 +20,8 @@ const images = [
     id: 2,
     img: Hero1,
     desc: "Headset down",
-    content: "Unleash It. It's in you.",
+    content: "Unleash It. It's in",
+    other: "you.",
   },
 ];
 
@@ -30,7 +31,13 @@ const Hero = () => {
       {images.map((item) => {
         return (
           <div key={item.id}>
-            <Image src={item.img} alt={item.desc} width="500" height="650" />
+            <div className={styles.single}>
+              <Image src={item.img} alt={item.desc} width="500" height="650" />
+              <div className={styles.contents}>
+                <p>{item.content}</p>
+                <p className={styles.others}>{item.other}</p>
+              </div>
+            </div>
           </div>
         );
       })}

@@ -5,6 +5,11 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  height: 100px;
+}
+
+.container h1 {
+  cursor: pointer;
 }
 
 .btn {
@@ -14,4 +19,5 @@
   border-radius: 7px;
   color: white;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }

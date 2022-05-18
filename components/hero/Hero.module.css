@@ -1,3 +1,26 @@
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single:last-child {
+  position: relative;
+}
+
+.single:last-child .contents {
+  position: absolute;
+  color: #fff;
+  top: 60%;
+  left: 7rem;
+  font-size: 3rem;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.others {
+  color: #c24caa;
+  font-weight: bolder;
 }

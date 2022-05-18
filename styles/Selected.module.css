@@ -1,0 +1,37 @@
+.container {
+  font-family: "Montserrat", sans-serif;
+}
+
+.time__indicator {
+  background-color: #13173a;
+  height: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+.time__indicator p {
+  margin: auto;
+  font-size: 24px;
+}
+
+.selected {
+  max-width: 960px;
+  background-color: #f4f6fe;
+  margin: 6rem auto;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: #9e9ea0;
+}
+
+.content p:last-child {
+  background-color: #585bc8;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  color: #fff;
+}

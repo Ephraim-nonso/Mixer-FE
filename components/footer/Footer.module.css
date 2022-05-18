@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 3rem;
+  background-color: #f4f6fe;
+  font-family: "Manrope", sans-serif;
+  height: 290px;
+}
+
+.first {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 400px;
+}
+
+.first li {
+  list-style: none;
+  padding: 0.3em;
+}
+
+.first li:nth-child(1) {
+  color: #585bc8;
+  font-weight: bolder;
+}
+
+.second h1 {
+  font-family: "Montserrat", sans-serif;
+}

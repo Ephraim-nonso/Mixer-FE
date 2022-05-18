@@ -1,0 +1,42 @@
+.wrapper {
+  position: relative;
+}
+
+.img {
+  position: relative;
+  max-width: 100%;
+  height: 70vh;
+}
+
+.content {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  color: #e5e5e5;
+}
+
+.content h1 {
+  width: 70%;
+  font-size: 2.2rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.btn__wrapper button {
+  padding: 0.7rem 2rem;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.btn__wrapper .btn:first-child {
+  border: 1px solid #585bc8;
+  background-color: transparent;
+  margin-right: 2rem;
+  color: #e5e5e5;
+}
+
+.btn__wrapper .btn:last-child {
+  background-image: linear-gradient(to right, #585bc8, #cf6dbb);
+  color: #e5e5e5;
+}
