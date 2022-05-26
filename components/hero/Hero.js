@@ -31,7 +31,7 @@ const images = [
 const Hero = () => {
   const { wallet, provider, connect, connectTo, disconnect } =
     useContext(Web3Context);
-  console.log(wallet);
+
   const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {

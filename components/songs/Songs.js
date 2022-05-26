@@ -41,6 +41,13 @@ const music = [
 ];
 
 const Songs = () => {
+  let audio = new Audio("../../assets/siren.mp3");
+
+  const handleClick = () => {
+    audio.play();
+    console.log(audio);
+  };
+
   return (
     <div className={styles.container}>
       {music.map((item) => {
@@ -62,6 +69,7 @@ const Songs = () => {
                   color="#DB2A2A"
                   size={24}
                   className={styles.icon}
+                  onClick={handleClick}
                 />
 
                 <p>Play</p>
