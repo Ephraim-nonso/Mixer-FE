@@ -1,11 +1,14 @@
 import Layout from "../components/layouts/Layout";
 import "../styles/globals.css";
+import { Web3Provider } from "../context/Context";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Web3Provider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Web3Provider>
   );
 }
 

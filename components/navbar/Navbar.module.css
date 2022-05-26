@@ -12,6 +12,11 @@
   cursor: pointer;
 }
 
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .btn {
   background-image: linear-gradient(to right, #585bc8, #cf6dbb);
   border: none;
@@ -20,4 +25,16 @@
   color: white;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+  margin-right: 1.6rem;
+}
+
+.dbtn {
+  border: 1px solid #000;
+  background-color: #eee;
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  color: #585bc8;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  margin-right: 1.6rem;
 }
