@@ -68,7 +68,7 @@ const Hero = () => {
         <div className={styles.single}>
           <Image src={Hero1} alt="Headset down" width="500" height="650" />
           <div className={styles.contents}>
-            <p>Unleash It. It/'s in</p>
+            <p>Unleash It. It is in</p>
             <p className={styles.others}>You</p>
             <Link href={wallet?.address != undefined ? "./explore" : ""}>
               <button className={styles.btn} onClick={handleNext}>
