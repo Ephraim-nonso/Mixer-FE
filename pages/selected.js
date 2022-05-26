@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import styles from "../styles/Selected.module.css";
 import { Web3Storage } from "web3.storage";
-// import { Web3Context } from "../context/Context";
+import { Web3Context } from "../context/Context";
 
-const selected = () => {
+const Selected = () => {
   // const { wallet, provider, connect, connectTo, disconnect } =
   //   useContext(Web3Context);
   const [fileUrl, updateFileUrl] = useState("");
@@ -119,4 +119,4 @@ const selected = () => {
   );
 };
 
-export default selected;
+export default Selected;
