@@ -12,7 +12,7 @@
 .single:last-child .contents {
   position: absolute;
   color: #fff;
-  top: 60%;
+  top: 45%;
   left: 7rem;
   font-size: 3rem;
   width: 50%;
@@ -24,4 +24,21 @@
 .others {
   color: #c24caa;
   font-weight: bolder;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #585bc8, #8b6dcf);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.span {
+  color: red;
+  font-size: 10px;
+  display: block;
+  margin-top: 10px;
 }

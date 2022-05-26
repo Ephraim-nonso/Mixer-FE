@@ -5,6 +5,7 @@ import { AiOutlineLink } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GrView } from "react-icons/gr";
 import { BsFillCircleFill } from "react-icons/bs";
+import ReactAudioPlayer from "react-audio-player";
 
 const music = [
   {
@@ -82,6 +83,8 @@ const Songs = () => {
           </div>
         );
       })}
+
+      {/* <ReactAudioPlayer src={audio} controls autoPlay /> */}
     </div>
   );
 };

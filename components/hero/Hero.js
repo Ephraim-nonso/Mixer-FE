@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Hero.module.css";
 import Image from "next/image";
 import hero from "../../assets/hero.png";
 import Hero1 from "../../assets/hero1.png";
 import Hero2 from "../../assets/hero2.png";
+import Link from "next/link";
+import { Web3Context } from "../../context/Context";
 
 const images = [
   {
@@ -22,25 +24,56 @@ const images = [
     desc: "Headset down",
     content: "Unleash It. It's in",
     other: "you.",
+    btn: "Start contest",
   },
 ];
 
 const Hero = () => {
+  const { wallet, provider, connect, connectTo, disconnect } =
+    useContext(Web3Context);
+  console.log(wallet);
+  const [isValid, setIsValid] = useState(false);
+
+  const handleNext = () => {
+    setIsValid(true);
+  };
   return (
     <div className={styles.container}>
-      {images.map((item) => {
-        return (
-          <div key={item.id}>
-            <div className={styles.single}>
-              <Image src={item.img} alt={item.desc} width="500" height="650" />
-              <div className={styles.contents}>
-                <p>{item.content}</p>
-                <p className={styles.others}>{item.other}</p>
-              </div>
-            </div>
+      <div>
+        <div className={styles.single}>
+          <Image src={hero} alt="Headset" width="500" height="650" />
+          <div className={styles.contents}>
+            <p></p>
+            <p className={styles.others}></p>
           </div>
-        );
-      })}
+        </div>
+      </div>
+      <div>
+        <div className={styles.single}>
+          <Image src={Hero2} alt="Singing Lady" width="500" height="650" />
+          <div className={styles.contents}>
+            <p></p>
+            <p className={styles.others}></p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className={styles.single}>
+          <Image src={Hero1} alt="Headset down" width="500" height="650" />
+          <div className={styles.contents}>
+            <p>Unleash It. It's in</p>
+            <p className={styles.others}>You</p>
+            <Link href={wallet?.address != undefined ? "./explore" : ""}>
+              <button className={styles.btn} onClick={handleNext}>
+                Start Contest
+              </button>
+            </Link>
+            {isValid || wallet?.address != undefined ? (
+              <span className={styles.span}>Please connect your wallet.</span>
+            ) : null}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

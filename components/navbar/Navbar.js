@@ -14,17 +14,12 @@ const Navbar = () => {
     useContext(Web3Context);
 
   const handleConnect = () => {
-    // WebProvider.on("connect", (info) => {
-    //   console.log(info);
-    // });
-    console.log(provider);
+    console.log(wallet);
     connect();
-    // connectTo();
   };
 
   const handleDisconnect = () => {
     disconnect();
-    console.log(disconnect);
   };
 
   useEffect(() => {}, []);
@@ -36,18 +31,16 @@ const Navbar = () => {
       </Link>
 
       <div className={styles.btns}>
-        <Link href={wallet ? "/explore" : ""}>
-          <button className={styles.btn} onClick={handleConnect}>
-            {!!wallet ? addressShortner(wallet.address) : "Connect Wallet"}
-          </button>
-        </Link>
+        <button className={styles.btn} onClick={handleConnect}>
+          {!!wallet ? addressShortner(wallet.address) : "Connect Wallet"}
+        </button>
+
         {!!wallet ? (
           <button className={styles.dbtn} onClick={handleDisconnect}>
             Disconnect Wallet
           </button>
         ) : null}
       </div>
-      {/* )} */}
     </nav>
   );
 };
