@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./Hero.module.css";
 import Image from "next/image";
 import hero from "../../assets/hero.png";
@@ -34,8 +34,15 @@ const Hero = () => {
   console.log(wallet);
   const [isValid, setIsValid] = useState(false);
 
+  useEffect(() => {
+    if (!!wallet?.address) {
+      setIsValid(false);
+    }
+  }, []);
+
   const handleNext = () => {
     setIsValid(true);
+    console.log(wallet?.address);
   };
   return (
     <div className={styles.container}>
@@ -68,7 +75,7 @@ const Hero = () => {
                 Start Contest
               </button>
             </Link>
-            {isValid || wallet?.address != undefined ? (
+            {isValid ? (
               <span className={styles.span}>Please connect your wallet.</span>
             ) : null}
           </div>

@@ -14,7 +14,6 @@ const Navbar = () => {
     useContext(Web3Context);
 
   const handleConnect = () => {
-    console.log(wallet);
     connect();
   };
 
