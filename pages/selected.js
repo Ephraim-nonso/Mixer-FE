@@ -1,15 +1,15 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../styles/Selected.module.css";
 import { Web3Storage } from "web3.storage";
-import { Web3Context } from "../context/Context";
+// import { Web3Context } from "../context/Context";
 
 const selected = () => {
-  const { wallet, provider, connect, connectTo, disconnect } =
-    useContext(Web3Context);
+  // const { wallet, provider, connect, connectTo, disconnect } =
+  //   useContext(Web3Context);
   const [fileUrl, updateFileUrl] = useState("");
   const hiddenFileInput = useRef(null);
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
   const API_TOKEN =
@@ -108,7 +108,7 @@ const selected = () => {
           <div>
             <h4>Click link to view upload.</h4>
             <p>
-              <a href={fileUrl} className={Styles.linkGuy}>
+              <a href={fileUrl} className={styles.linkGuy}>
                 {fileUrl}
               </a>
             </p>
