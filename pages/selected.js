@@ -4,8 +4,8 @@ import { Web3Storage } from "web3.storage";
 import { Web3Context } from "../context/Context";
 
 const Selected = () => {
-  // const { wallet, provider, connect, connectTo, disconnect } =
-  //   useContext(Web3Context);
+  const { wallet, provider, connect, connectTo, disconnect } =
+    useContext(Web3Context);
   const [fileUrl, updateFileUrl] = useState("");
   const hiddenFileInput = useRef(null);
 
@@ -16,7 +16,6 @@ const Selected = () => {
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDU4Q0RCMjc1ODNlZjdkMDdlZTQxNmZjQUM1MzM1NzgyMzdhOENiNzEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDk1NDk3Nzc3ODQsIm5hbWUiOiJpbnZlc3RpZnkifQ.zywsJ0WgIN3eUJcLGyKhamGljTMvTqEIvMBAqw-z4oQ";
   const handleUpload = async (e) => {
     const file = e.target.files[0];
-    console.log(file);
 
     try {
       // Construct with token and endpoint
