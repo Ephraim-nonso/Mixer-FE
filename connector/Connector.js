@@ -1,7 +1,7 @@
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 
-export const contractAddress = "0x6bd6fc8855B3E254B99468BcE9dD554aCb5f3E2A";
+export const contractAddress = "0x68600492317c31D5102d93D9fDE1d5619e19b0fc";
 
 export const providerOptions = {
   /* See Provider Options Section */

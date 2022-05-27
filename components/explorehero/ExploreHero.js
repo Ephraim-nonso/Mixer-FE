@@ -34,7 +34,7 @@ const ExploreHero = () => {
             <Link href="./listen">
               <button className={styles.btn}>Listen to Music</button>
             </Link>
-            <Link href={wallet?.address != undefined ? "" : ""}>
+            <Link href={wallet?.address != undefined ? "/selected" : ""}>
               <button className={styles.btn} onClick={handleJoinContest}>
                 Join Contest
               </button>

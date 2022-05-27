@@ -42,6 +42,10 @@ const Selected = () => {
         <p>***4days 16hours Left for upload***</p>
       </div>
 
+      {wallet?.address == undefined ? (
+        <p className={styles.warn}>Connect your wallet</p>
+      ) : null}
+
       <div className={styles.selected}>
         <h5>Selected Addresses</h5>
         <div className={styles.content}>
@@ -49,56 +53,66 @@ const Selected = () => {
 
           <input
             type="file"
-            onChange={handleUpload}
+            onChange={wallet?.address != undefined ? handleUpload : null}
             style={{ display: "none" }}
             ref={hiddenFileInput}
             multiple
           />
-          <p onClick={handleClick}>Upload</p>
+          <p onClick={wallet?.address != undefined ? handleClick : null}>
+            Upload
+          </p>
         </div>
         <div className={styles.content}>
-          <p>0x712***094***232</p>
+          <p>0x61a***094***232</p>
           <input
             type="file"
-            onChange={handleUpload}
+            onChange={wallet?.address != undefined ? handleUpload : null}
             style={{ display: "none" }}
             ref={hiddenFileInput}
             multiple
           />
-          <p onClick={handleClick}>Upload</p>
+          <p onClick={wallet?.address != undefined ? handleClick : null}>
+            Upload
+          </p>
         </div>
         <div className={styles.content}>
-          <p>0x712***094***232</p>
+          <p>0x815***094***232</p>
           <input
             type="file"
-            onChange={handleUpload}
+            onChange={wallet?.address != undefined ? handleUpload : null}
             style={{ display: "none" }}
             ref={hiddenFileInput}
             multiple
           />
-          <p onClick={handleClick}>Upload</p>
+          <p onClick={wallet?.address != undefined ? handleClick : null}>
+            Upload
+          </p>
         </div>
         <div className={styles.content}>
-          <p>0x712***094***232</p>
+          <p>0xb27***094***232</p>
           <input
             type="file"
-            onChange={handleUpload}
+            onChange={wallet?.address != undefined ? handleUpload : null}
             style={{ display: "none" }}
             ref={hiddenFileInput}
             multiple
           />
-          <p onClick={handleClick}>Upload</p>
+          <p onClick={wallet?.address != undefined ? handleClick : null}>
+            Upload
+          </p>
         </div>
         <div className={styles.content}>
-          <p>0x712***094***232</p>
+          <p>0xe14***094***232</p>
           <input
             type="file"
-            onChange={handleUpload}
+            onChange={wallet?.address != undefined ? handleUpload : null}
             style={{ display: "none" }}
             ref={hiddenFileInput}
             multiple
           />
-          <p onClick={handleClick}>Upload</p>
+          <p onClick={wallet?.address != undefined ? handleClick : null}>
+            Upload
+          </p>
         </div>
       </div>
 

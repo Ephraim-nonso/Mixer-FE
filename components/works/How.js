@@ -46,8 +46,8 @@ const How = () => {
                 <h5>{item.head}</h5>
                 <p>{item.body}</p>
               </div>
-              <div className={styles.img}>
-                <Image src={item.img} alt="Indicates" />
+              <div className={styles.imgCont}>
+                <Image src={item.img} alt="Indicates" className={styles.img} />
               </div>
             </div>
           );

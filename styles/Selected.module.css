@@ -12,6 +12,7 @@
 .time__indicator p {
   margin: auto;
   font-size: 24px;
+  padding-top: 1.2rem;
 }
 
 .selected {
@@ -37,6 +38,7 @@
   cursor: pointer;
 }
 
-.passive {
-  background-color: red;
+.warn {
+  color: red;
+  text-align: center;
 }

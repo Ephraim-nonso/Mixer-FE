@@ -34,11 +34,11 @@ const Hero = () => {
 
   const [isValid, setIsValid] = useState(false);
 
-  useEffect(() => {
-    if (!!wallet?.address) {
-      setIsValid(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!!wallet?.address) {
+  //     setIsValid(false);
+  //   }
+  // }, []);
 
   const handleNext = () => {
     setIsValid(true);
@@ -75,7 +75,7 @@ const Hero = () => {
                 Start Contest
               </button>
             </Link>
-            {isValid ? (
+            {isValid || wallet?.address != undefined ? (
               <span className={styles.span}>Please connect your wallet.</span>
             ) : null}
           </div>

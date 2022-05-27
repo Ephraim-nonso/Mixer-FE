@@ -1,7 +1,7 @@
 #head {
-  text-align: center;
+  text-align: left;
   margin: auto;
-  padding: 0.5rem;
+  padding: 2rem 3rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -36,8 +36,15 @@
   font-size: 1rem;
   margin-top: 0.8rem;
   padding-right: 5rem;
+  width: 70%;
+}
+
+.imgCont {
+  flex: 2;
+  /* border: 3px solid #c24caa; */
 }
 
 .img {
-  flex: 2;
+  object-fit: cover;
+  max-width: auto;
 }
