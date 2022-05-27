@@ -40,3 +40,7 @@
   background-image: linear-gradient(to right, #585bc8, #cf6dbb);
   color: #e5e5e5;
 }
+
+.span {
+  color: red;
+}

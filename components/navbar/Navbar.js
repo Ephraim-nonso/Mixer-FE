@@ -31,7 +31,7 @@ const Navbar = () => {
 
       <div className={styles.btns}>
         <button className={styles.btn} onClick={handleConnect}>
-          {!!wallet ? addressShortner(wallet.address) : "Connect Wallet"}
+          {wallet ? addressShortner(wallet.address) : "Connect Wallet"}
         </button>
 
         {!!wallet ? (

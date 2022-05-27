@@ -5,6 +5,9 @@ import { AiOutlineLink } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GrView } from "react-icons/gr";
 import { BsFillCircleFill } from "react-icons/bs";
+import { contractAddress } from "../../connector/Connector";
+import ContractAbi from "../../utils/abi.json";
+import { ethers, Contract } from "ethers";
 
 const music = [
   {
@@ -40,6 +43,20 @@ const music = [
 ];
 
 const Songs = () => {
+  const handleTip = async () => {
+    const myProvider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = myProvider.getSigner();
+
+    const contractInstance = new Contract(contractAddress, ContractAbi, signer);
+    console.log(contractInstance);
+
+    const tip = await contractInstance.tip(
+      "0xf18be8A5FcBD320fDe04843954c1c1A155b9Ae2b",
+      "1000"
+    );
+    console.log(tip);
+  };
+
   return (
     <div className={styles.container}>
       {music.map((item) => {
@@ -66,7 +83,11 @@ const Songs = () => {
                 <p>Play</p>
               </div>
               <div className={styles.tip}>
-                <RiMoneyDollarCircleLine size={24} className={styles.icon} />
+                <RiMoneyDollarCircleLine
+                  size={24}
+                  className={styles.icon}
+                  onClick={handleTip}
+                />
 
                 <p>Tip</p>
               </div>
