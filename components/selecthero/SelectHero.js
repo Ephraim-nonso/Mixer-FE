@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import styles from "./ExploreHero.module.css";
+import styles from "./SelectHero.module.css";
 import eHero from "../../assets/eHero.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +8,9 @@ import { Contract, ethers } from "ethers";
 import ContractAbi from "../../utils/abi.json";
 import { contractAddress } from "../../connector/Connector";
 
-const ExploreHero = () => {
+const SelectHero = () => {
   const [isValid, setIsValid] = useState(false);
-  const { wallet, provider } = useContext(Web3Context);
+  const { wallet } = useContext(Web3Context);
 
   const handleJoinContest = async () => {
     setIsValid(true);
@@ -23,8 +23,8 @@ const ExploreHero = () => {
     console.log(ContractAbi);
     console.log(signer);
 
-    const indicate = await contractInstance.indicate();
-    // console.log(indicate);
+    const indicate = await contractInstance.upload();
+    console.log(indicate);
   };
 
   return (
@@ -34,14 +34,14 @@ const ExploreHero = () => {
           <Image src={eHero} layout="fill" />
         </div>
         <div className={styles.content}>
-          <h1>Entrance ends 12th May, 2022.</h1>
+          <h1>Entrance Date Elapsed.</h1>
           <div className={styles.btn__wrapper}>
             <Link href="./listen">
               <button className={styles.btn}>Listen to Music</button>
             </Link>
-            <Link href={wallet?.address != undefined ? "./selectpage" : ""}>
+            <Link href={wallet?.address != undefined ? "./selected" : ""}>
               <button className={styles.btn} onClick={handleJoinContest}>
-                Join Contest
+                Selected Users
               </button>
             </Link>
           </div>
@@ -51,4 +51,4 @@ const ExploreHero = () => {
   );
 };
 
-export default ExploreHero;
+export default SelectHero;
