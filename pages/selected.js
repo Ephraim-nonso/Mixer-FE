@@ -2,6 +2,8 @@ import React, { useRef, useState, useContext } from "react";
 import styles from "../styles/Selected.module.css";
 import { Web3Storage } from "web3.storage";
 import { Web3Context } from "../context/Context";
+import Modal from "../components/modal/Modal";
+import { Loader } from "rsuite";
 
 const Selected = () => {
   const { wallet, provider, connect, connectTo, disconnect } =
@@ -40,6 +42,7 @@ const Selected = () => {
     <div className={styles.container}>
       <div className={styles.time__indicator}>
         <p>***4days 16hours Left for upload***</p>
+        <Loader />
       </div>
 
       {wallet?.address == undefined ? (
@@ -116,18 +119,11 @@ const Selected = () => {
         </div>
       </div>
 
-      <div>
-        {fileUrl && (
-          <div>
-            <h4>Click link to view upload.</h4>
-            <p>
-              <a href={fileUrl} className={styles.linkGuy}>
-                {fileUrl}
-              </a>
-            </p>
-          </div>
-        )}
-      </div>
+      {fileUrl != "" ? (
+        <div className={styles.modal}>
+          <Modal fileUrl={fileUrl} />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -19,9 +19,6 @@ const SelectHero = () => {
     const signer = myProvider.getSigner();
 
     const contractInstance = new Contract(contractAddress, ContractAbi, signer);
-    console.log(contractInstance);
-    console.log(ContractAbi);
-    console.log(signer);
 
     const indicate = await contractInstance.upload();
     console.log(indicate);

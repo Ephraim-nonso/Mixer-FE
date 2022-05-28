@@ -1,0 +1,42 @@
+.container {
+  width: 48rem;
+  height: 20rem;
+  background-color: #13173a;
+  text-align: center;
+  color: #fff;
+  padding: 5rem;
+}
+
+.link {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.linkGuy {
+  cursor: pointer;
+}
+
+.linkGuy:hover {
+  color: rgb(175, 175, 247);
+}
+
+.close {
+  background-color: #fff;
+  width: 50%;
+  padding: 8px 12px;
+  color: #13173a;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+/* Hide container */
+
+.hideContainer {
+  display: none;
+}

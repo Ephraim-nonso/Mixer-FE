@@ -1,5 +1,6 @@
 .container {
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 .time__indicator {
@@ -39,6 +40,13 @@
 }
 
 .warn {
+  font-weight: bold;
   color: red;
   text-align: center;
+}
+
+.modal {
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
 }

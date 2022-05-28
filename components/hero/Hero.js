@@ -75,7 +75,7 @@ const Hero = () => {
                 Start Contest
               </button>
             </Link>
-            {isValid || wallet?.address != undefined ? (
+            {isValid ? (
               <span className={styles.span}>Please connect your wallet.</span>
             ) : null}
           </div>
